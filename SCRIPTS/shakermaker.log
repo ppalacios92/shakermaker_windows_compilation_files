@@ -1,0 +1,2236 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260314213125
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 7920
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 0 - Clean stale sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  Clean sitecustomize.py written to Python base
+
+======================================================================
+  STEP 1 - System Checklist
+======================================================================
+  [OK]  Git found: git version 2.53.0.windows.2
+  [OK]  Python 3.10 found: Python 3.10.11
+  [OK]  Visual Studio 2022 Community found
+  [OK]  Intel oneAPI Base Toolkit found (MKL present)
+  [OK]  Intel oneAPI HPC Toolkit found (ifx present)
+
+======================================================================
+  STEP 2 - Virtual Environment
+======================================================================
+  [--]  Virtual environment shakermaker_venv not found - will create it
+        Path: C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 3 - Python Dependencies Checklist
+======================================================================
+        Virtual environment not yet created - all deps will be installed after
+
+======================================================================
+  STEP 4 - Installation Summary
+======================================================================
+
+  System components to install:
+    - VirtualEnv
+
+  Python packages to install/update:
+    - numpy==1.26.4
+    - setuptools
+    - wheel
+    - h5py
+    - mpi4py
+    - matplotlib
+    - scipy
+
+  Virtual environment : shakermaker_venv
+  Location            : C:\Users\ppala\shakermaker_venv
+
+
+======================================================================
+  STEP 5 - Installing System Components
+======================================================================
+  Creating virtual environment shakermaker_venv ...
+
+  [OK]  Virtual environment created at C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 6 - Upgrading pip
+======================================================================
+
+  [OK]  pip upgraded: pip 26.0.1 from C:\Users\ppala\shakermaker_venv\lib\site-packages\pip (python 3.10)
+
+======================================================================
+  STEP 7 - Installing Python Dependencies
+======================================================================
+  Installing numpy==1.26.4 ...
+
+  [OK]  numpy==1.26.4 installed
+  Installing setuptools ...
+
+  [OK]  setuptools installed
+  Installing wheel ...
+
+  [OK]  wheel installed
+  Installing h5py ...
+
+  [OK]  h5py installed
+  Installing mpi4py ...
+
+  [OK]  mpi4py installed
+  Installing matplotlib ...
+
+  [OK]  matplotlib installed
+  Installing scipy ...
+
+  [OK]  scipy installed
+
+======================================================================
+  STEP 8 - Fix Python Base sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base
+  [OK]  sitecustomize.py written to Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+
+======================================================================
+  STEP 9 - Final Verification
+======================================================================
+  [OK]  Virtual env Python: Python 3.10.11
+  [OK]  numpy 1.26.4
+  [OK]  setuptools 65.5.0
+  [OK]  wheel 0.46.3
+  [OK]  h5py 3.16.0
+  [OK]  mpi4py 4.1.1
+  [OK]  matplotlib 3.10.8
+  [OK]  scipy 1.15.3
+
+======================================================================
+  Setup complete!
+  Venv : shakermaker_venv  at  C:\Users\ppala\shakermaker_venv
+  Log  : C:\Users\ppala\shakermaker_setup.log
+  Next : Run Step 2 - Junction Setup
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314213206
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314213207
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\02_shakermaker_junction.ps1
+Process ID: 12268
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Check Existing Junction
+======================================================================
+  [--]  No junction found at C:\shakermaker_compiler\ShakerMaker - will create
+
+======================================================================
+  STEP 2 - ShakerMaker Source Location
+======================================================================
+
+  Source path found in shakermaker.cfg:
+  C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+  [OK]  Source path validated: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 3 - Create Junction
+======================================================================
+  [OK]  Created directory: C:\shakermaker_compiler
+  [OK]  Junction created successfully
+          C:\shakermaker_compiler\ShakerMaker
+          => C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 4 - Update Config File
+======================================================================
+  [OK]  SHAKERMAKER_SOURCE saved to shakermaker.cfg
+
+======================================================================
+  STEP 5 - Verify Junction
+======================================================================
+  [OK]  Junction verified as reparse point
+  [OK]  setup.py reachable at C:\shakermaker_compiler\ShakerMaker\setup.py : True
+
+======================================================================
+  Junction setup complete!
+  Junction : C:\shakermaker_compiler\ShakerMaker
+  Source   : C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+  Log      : C:\Users\ppala\shakermaker_junction.log
+  Next     : Run Step 3 - Build and Compile
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314213208
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314213210
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 24604
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [OK]  Virtual environment found: C:\Users\ppala\shakermaker_venv
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+======================================================================
+  STEP 2 - Create ifort.bat Wrapper
+======================================================================
+  [OK]  ifort.bat wrapper already exists
+
+======================================================================
+  STEP 3 - Run Build via CMD
+======================================================================
+
+  The build requires a CMD environment with VS and Intel compilers.
+  Launching build subprocess now...
+
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> $global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20260314213416
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314213423
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 26640
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 0 - Clean stale sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  Clean sitecustomize.py written to Python base
+
+======================================================================
+  STEP 1 - System Checklist
+======================================================================
+  [OK]  Git found: git version 2.53.0.windows.2
+  [OK]  Python 3.10 found: Python 3.10.11
+  [OK]  Visual Studio 2022 Community found
+  [OK]  Intel oneAPI Base Toolkit found (MKL present)
+  [OK]  Intel oneAPI HPC Toolkit found (ifx present)
+
+======================================================================
+  STEP 2 - Virtual Environment
+======================================================================
+  [OK]  Virtual environment shakermaker_venv already exists - will use it
+        Path: C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 3 - Python Dependencies Checklist
+======================================================================
+  [OK]  numpy 1.26.4 already installed
+  [OK]  setuptools 65.5.0 already installed
+  [OK]  wheel 0.46.3 already installed
+  [OK]  h5py 3.16.0 already installed
+  [OK]  mpi4py 4.1.1 already installed
+  [OK]  matplotlib 3.10.8 already installed
+  [OK]  scipy 1.15.3 already installed
+
+======================================================================
+  STEP 4 - Installation Summary
+======================================================================
+
+  Everything is already installed. Nothing to do!
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314213423
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314213424
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\02_shakermaker_junction.ps1
+Process ID: 8540
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Check Existing Junction
+======================================================================
+  [OK]  Junction already exists at C:\shakermaker_compiler\ShakerMaker
+        Currently pointing to: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+Confirm
+The item at C:\shakermaker_compiler\ShakerMaker has children and the Recurse parameter was not specified. If you continue, all children will be removed with the item. Are you sure you want to continue?
+&Yes  Yes to &All  &No  No to A&ll  &Suspend
+Y
+        Existing junction removed
+
+======================================================================
+  STEP 2 - ShakerMaker Source Location
+======================================================================
+
+  Source path found in shakermaker.cfg:
+  C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+  [OK]  Source path validated: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 3 - Create Junction
+======================================================================
+  [OK]  Directory already exists: C:\shakermaker_compiler
+  [OK]  Junction created successfully
+          C:\shakermaker_compiler\ShakerMaker
+          => C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 4 - Update Config File
+======================================================================
+  [OK]  SHAKERMAKER_SOURCE saved to shakermaker.cfg
+
+======================================================================
+  STEP 5 - Verify Junction
+======================================================================
+  [OK]  Junction verified as reparse point
+  [OK]  setup.py reachable at C:\shakermaker_compiler\ShakerMaker\setup.py : True
+
+======================================================================
+  Junction setup complete!
+  Junction : C:\shakermaker_compiler\ShakerMaker
+  Source   : C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+  Log      : C:\Users\ppala\shakermaker_junction.log
+  Next     : Run Step 3 - Build and Compile
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314213426
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314213427
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 26888
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [OK]  Virtual environment found: C:\Users\ppala\shakermaker_venv
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+======================================================================
+  STEP 2 - Create ifort.bat Wrapper
+======================================================================
+  [OK]  ifort.bat wrapper already exists
+
+======================================================================
+  STEP 3 - Run Build via CMD
+======================================================================
+
+  The build requires a CMD environment with VS and Intel compilers.
+  Launching build subprocess now...
+
+  [OK]  Build completed successfully
+
+======================================================================
+  STEP 4 - Create sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base
+  [OK]  sitecustomize.py created in venv: C:\Users\ppala\shakermaker_venv\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py created in Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py contents verified
+
+======================================================================
+  STEP 5 - Smoke Test
+======================================================================
+  Testing core import inside initialized CMD...
+  [OK]  core import OK
+
+======================================================================
+  Build complete!
+  Venv    : C:\Users\ppala\shakermaker_venv
+  Build   : C:\shakermaker_compiler\ShakerMaker
+  Log     : C:\Users\ppala\shakermaker_build.log
+
+  To activate your environment:
+  C:\Users\ppala\shakermaker_venv\Scripts\Activate.ps1
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314213454
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314213459
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 18820
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 0 - Clean stale sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  Clean sitecustomize.py written to Python base
+        Removed stale sitecustomize.py from venv
+
+======================================================================
+  STEP 1 - System Checklist
+======================================================================
+  [OK]  Git found: git version 2.53.0.windows.2
+  [OK]  Python 3.10 found: Python 3.10.11
+  [OK]  Visual Studio 2022 Community found
+  [OK]  Intel oneAPI Base Toolkit found (MKL present)
+  [OK]  Intel oneAPI HPC Toolkit found (ifx present)
+
+======================================================================
+  STEP 2 - Virtual Environment
+======================================================================
+  [OK]  Virtual environment shakermaker_venv already exists - will use it
+        Path: C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 3 - Python Dependencies Checklist
+======================================================================
+  [OK]  numpy 1.26.4 already installed
+  [OK]  setuptools 65.5.0 already installed
+  [OK]  wheel 0.46.3 already installed
+  [OK]  h5py 3.16.0 already installed
+  [OK]  mpi4py 4.1.1 already installed
+  [OK]  matplotlib 3.10.8 already installed
+  [OK]  scipy 1.15.3 already installed
+
+======================================================================
+  STEP 4 - Installation Summary
+======================================================================
+
+  Everything is already installed. Nothing to do!
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314213501
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314213502
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\02_shakermaker_junction.ps1
+Process ID: 6884
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Check Existing Junction
+======================================================================
+  [OK]  Junction already exists at C:\shakermaker_compiler\ShakerMaker
+        Currently pointing to: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+Confirm
+The item at C:\shakermaker_compiler\ShakerMaker has children and the Recurse parameter was not specified. If you continue, all children will be removed with the item. Are you sure you want to continue?
+&Yes  Yes to &All  &No  No to A&ll  &Suspend
+Y
+        Existing junction removed
+
+======================================================================
+  STEP 2 - ShakerMaker Source Location
+======================================================================
+
+  Source path found in shakermaker.cfg:
+  C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+  [OK]  Source path validated: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 3 - Create Junction
+======================================================================
+  [OK]  Directory already exists: C:\shakermaker_compiler
+  [OK]  Junction created successfully
+          C:\shakermaker_compiler\ShakerMaker
+          => C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 4 - Update Config File
+======================================================================
+  [OK]  SHAKERMAKER_SOURCE saved to shakermaker.cfg
+
+======================================================================
+  STEP 5 - Verify Junction
+======================================================================
+  [OK]  Junction verified as reparse point
+  [OK]  setup.py reachable at C:\shakermaker_compiler\ShakerMaker\setup.py : True
+
+======================================================================
+  Junction setup complete!
+  Junction : C:\shakermaker_compiler\ShakerMaker
+  Source   : C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+  Log      : C:\Users\ppala\shakermaker_junction.log
+  Next     : Run Step 3 - Build and Compile
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314213502
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314213503
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 18084
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [OK]  Virtual environment found: C:\Users\ppala\shakermaker_venv
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+======================================================================
+  STEP 2 - Create ifort.bat Wrapper
+======================================================================
+  [OK]  ifort.bat wrapper already exists
+
+======================================================================
+  STEP 3 - Run Build via CMD
+======================================================================
+
+  The build requires a CMD environment with VS and Intel compilers.
+  Launching build subprocess now...
+
+  [OK]  Build completed successfully
+
+======================================================================
+  STEP 4 - Create sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base
+  [OK]  sitecustomize.py created in venv: C:\Users\ppala\shakermaker_venv\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py created in Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py contents verified
+
+======================================================================
+  STEP 5 - Smoke Test
+======================================================================
+  Testing core import inside initialized CMD...
+  [OK]  core import OK
+
+======================================================================
+  Build complete!
+  Venv    : C:\Users\ppala\shakermaker_venv
+  Build   : C:\shakermaker_compiler\ShakerMaker
+  Log     : C:\Users\ppala\shakermaker_build.log
+
+  To activate your environment:
+  C:\Users\ppala\shakermaker_venv\Scripts\Activate.ps1
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314213522
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215053
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 152752
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [!!]  Virtual environment not found at C:\Users\ppala\shakermaker_venv
+        Run Step 1 (Prerequisites Setup) first.
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+  [!!]  One or more required components are missing. Cannot proceed.
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> $global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20260314215104
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215105
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 161948
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [!!]  Virtual environment not found at C:\Users\ppala\shakermaker_venv
+        Run Step 1 (Prerequisites Setup) first.
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+  [!!]  One or more required components are missing. Cannot proceed.
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314215106
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215109
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 162032
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [!!]  Virtual environment not found at C:\Users\ppala\shakermaker_venv
+        Run Step 1 (Prerequisites Setup) first.
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+  [!!]  One or more required components are missing. Cannot proceed.
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> $global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20260314215119
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215134
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 160260
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [!!]  Virtual environment not found at C:\Users\ppala\shakermaker_venv
+        Run Step 1 (Prerequisites Setup) first.
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+  [!!]  One or more required components are missing. Cannot proceed.
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> $global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20260314215137
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215207
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 155416
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 0 - Clean stale sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  Clean sitecustomize.py written to Python base
+
+======================================================================
+  STEP 1 - System Checklist
+======================================================================
+  [OK]  Git found: git version 2.53.0.windows.2
+  [OK]  Python 3.10 found: Python 3.10.9
+  [OK]  Visual Studio 2022 Community found
+  [OK]  Intel oneAPI Base Toolkit found (MKL present)
+  [OK]  Intel oneAPI HPC Toolkit found (ifx present)
+
+======================================================================
+  STEP 2 - Virtual Environment
+======================================================================
+  [--]  Virtual environment shakermaker_venv not found - will create it
+        Path: C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 3 - Python Dependencies Checklist
+======================================================================
+        Virtual environment not yet created - all deps will be installed after
+
+======================================================================
+  STEP 4 - Installation Summary
+======================================================================
+
+  System components to install:
+    - VirtualEnv
+
+  Python packages to install/update:
+    - numpy==1.26.4
+    - setuptools
+    - wheel
+    - h5py
+    - mpi4py
+    - matplotlib
+    - scipy
+
+  Virtual environment : shakermaker_venv
+  Location            : C:\Users\ppala\shakermaker_venv
+
+
+======================================================================
+  STEP 5 - Installing System Components
+======================================================================
+  Creating virtual environment shakermaker_venv ...
+
+  [OK]  Virtual environment created at C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 6 - Upgrading pip
+======================================================================
+
+  [OK]  pip upgraded: pip 26.0.1 from C:\Users\ppala\shakermaker_venv\lib\site-packages\pip (python 3.10)
+
+======================================================================
+  STEP 7 - Installing Python Dependencies
+======================================================================
+  Installing numpy==1.26.4 ...
+
+  [OK]  numpy==1.26.4 installed
+  Installing setuptools ...
+
+  [OK]  setuptools installed
+  Installing wheel ...
+
+  [OK]  wheel installed
+  Installing h5py ...
+
+  [OK]  h5py installed
+  Installing mpi4py ...
+
+  [OK]  mpi4py installed
+  Installing matplotlib ...
+
+  [OK]  matplotlib installed
+  Installing scipy ...
+
+  [OK]  scipy installed
+
+======================================================================
+  STEP 8 - Fix Python Base sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base
+  [OK]  sitecustomize.py written to Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+
+======================================================================
+  STEP 9 - Final Verification
+======================================================================
+  [OK]  Virtual env Python: Python 3.10.9
+  [OK]  numpy 1.26.4
+  [OK]  setuptools 65.5.0
+  [OK]  wheel 0.46.3
+  [OK]  h5py 3.16.0
+  [OK]  mpi4py 4.1.1
+  [OK]  matplotlib 3.10.8
+  [OK]  scipy 1.15.3
+
+======================================================================
+  Setup complete!
+  Venv : shakermaker_venv  at  C:\Users\ppala\shakermaker_venv
+  Log  : C:\Users\ppala\shakermaker_setup.log
+  Next : Run Step 2 - Junction Setup
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314215252
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215252
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\02_shakermaker_junction.ps1
+Process ID: 158496
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Check Existing Junction
+======================================================================
+  [OK]  Junction already exists at C:\shakermaker_compiler\ShakerMaker
+        Currently pointing to: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+Confirm
+The item at C:\shakermaker_compiler\ShakerMaker has children and the Recurse parameter was not specified. If you continue, all children will be removed with the item. Are you sure you want to continue?
+&Yes  Yes to &All  &No  No to A&ll  &Suspend
+Y
+        Existing junction removed
+
+======================================================================
+  STEP 2 - ShakerMaker Source Location
+======================================================================
+
+  Source path found in shakermaker.cfg:
+  C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+  [OK]  Source path validated: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 3 - Create Junction
+======================================================================
+  [OK]  Directory already exists: C:\shakermaker_compiler
+  [OK]  Junction created successfully
+          C:\shakermaker_compiler\ShakerMaker
+          => C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 4 - Update Config File
+======================================================================
+  [OK]  SHAKERMAKER_SOURCE saved to shakermaker.cfg
+
+======================================================================
+  STEP 5 - Verify Junction
+======================================================================
+  [OK]  Junction verified as reparse point
+  [OK]  setup.py reachable at C:\shakermaker_compiler\ShakerMaker\setup.py : True
+
+======================================================================
+  Junction setup complete!
+  Junction : C:\shakermaker_compiler\ShakerMaker
+  Source   : C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+  Log      : C:\Users\ppala\shakermaker_junction.log
+  Next     : Run Step 3 - Build and Compile
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314215304
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215305
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 165544
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [OK]  Virtual environment found: C:\Users\ppala\shakermaker_venv
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+======================================================================
+  STEP 2 - Create ifort.bat Wrapper
+======================================================================
+  [OK]  ifort.bat wrapper already exists
+
+======================================================================
+  STEP 3 - Run Build via CMD
+======================================================================
+
+  The build requires a CMD environment with VS and Intel compilers.
+  Launching build subprocess now...
+
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> $global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20260314215318
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215324
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 157760
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 0 - Clean stale sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  Clean sitecustomize.py written to Python base
+
+======================================================================
+  STEP 1 - System Checklist
+======================================================================
+  [OK]  Git found: git version 2.53.0.windows.2
+  [OK]  Python 3.10 found: Python 3.10.9
+  [OK]  Visual Studio 2022 Community found
+  [OK]  Intel oneAPI Base Toolkit found (MKL present)
+  [OK]  Intel oneAPI HPC Toolkit found (ifx present)
+
+======================================================================
+  STEP 2 - Virtual Environment
+======================================================================
+  [OK]  Virtual environment shakermaker_venv already exists - will use it
+        Path: C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 3 - Python Dependencies Checklist
+======================================================================
+  [OK]  numpy 1.26.4 already installed
+  [OK]  setuptools 65.5.0 already installed
+  [OK]  wheel 0.46.3 already installed
+  [OK]  h5py 3.16.0 already installed
+  [OK]  mpi4py 4.1.1 already installed
+  [OK]  matplotlib 3.10.8 already installed
+  [OK]  scipy 1.15.3 already installed
+
+======================================================================
+  STEP 4 - Installation Summary
+======================================================================
+
+  Everything is already installed. Nothing to do!
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314215518
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215519
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\02_shakermaker_junction.ps1
+Process ID: 167120
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Check Existing Junction
+======================================================================
+  [OK]  Junction already exists at C:\shakermaker_compiler\ShakerMaker
+        Currently pointing to: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+Confirm
+The item at C:\shakermaker_compiler\ShakerMaker has children and the Recurse parameter was not specified. If you continue, all children will be removed with the item. Are you sure you want to continue?
+&Yes  Yes to &All  &No  No to A&ll  &Suspend
+Y
+        Existing junction removed
+
+======================================================================
+  STEP 2 - ShakerMaker Source Location
+======================================================================
+
+  Source path found in shakermaker.cfg:
+  C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+  [OK]  Source path validated: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 3 - Create Junction
+======================================================================
+  [OK]  Directory already exists: C:\shakermaker_compiler
+  [OK]  Junction created successfully
+          C:\shakermaker_compiler\ShakerMaker
+          => C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 4 - Update Config File
+======================================================================
+  [OK]  SHAKERMAKER_SOURCE saved to shakermaker.cfg
+
+======================================================================
+  STEP 5 - Verify Junction
+======================================================================
+  [OK]  Junction verified as reparse point
+  [OK]  setup.py reachable at C:\shakermaker_compiler\ShakerMaker\setup.py : True
+
+======================================================================
+  Junction setup complete!
+  Junction : C:\shakermaker_compiler\ShakerMaker
+  Source   : C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+  Log      : C:\Users\ppala\shakermaker_junction.log
+  Next     : Run Step 3 - Build and Compile
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314215521
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215521
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 144036
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [OK]  Virtual environment found: C:\Users\ppala\shakermaker_venv
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+======================================================================
+  STEP 2 - Create ifort.bat Wrapper
+======================================================================
+  [OK]  ifort.bat wrapper already exists
+
+======================================================================
+  STEP 3 - Run Build via CMD
+======================================================================
+
+  The build requires a CMD environment with VS and Intel compilers.
+  Launching build subprocess now...
+
+  [OK]  Build completed successfully
+
+======================================================================
+  STEP 4 - Create sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base
+  [OK]  sitecustomize.py created in venv: C:\Users\ppala\shakermaker_venv\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py created in Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py contents verified
+
+======================================================================
+  STEP 4b - Add Intel paths to system PATH permanently
+======================================================================
+  [OK]  Already in system PATH: C:\Program Files (x86)\Intel\oneAPI\compiler\latest\bin
+  [OK]  Already in system PATH: C:\Program Files (x86)\Intel\oneAPI\mpi\latest\bin
+  [!!]  Failed to update system PATH - try running as Administrator: Exception calling "SetEnvironmentVariable" with "3" argument(s): "Requested registry access is not allowed."
+
+======================================================================
+  STEP 5 - Smoke Test
+======================================================================
+  Testing core import inside initialized CMD...
+  [OK]  core import OK
+
+======================================================================
+  Build complete!
+  Venv    : C:\Users\ppala\shakermaker_venv
+  Build   : C:\shakermaker_compiler\ShakerMaker
+  Log     : C:\Users\ppala\shakermaker_build.log
+
+  To activate your environment:
+  C:\Users\ppala\shakermaker_venv\Scripts\Activate.ps1
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314215539
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215608
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 159368
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 0 - Clean stale sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  Clean sitecustomize.py written to Python base
+        Removed stale sitecustomize.py from venv
+
+======================================================================
+  STEP 1 - System Checklist
+======================================================================
+  [OK]  Git found: git version 2.53.0.windows.2
+  [OK]  Python 3.10 found: Python 3.10.9
+  [OK]  Visual Studio 2022 Community found
+  [OK]  Intel oneAPI Base Toolkit found (MKL present)
+  [OK]  Intel oneAPI HPC Toolkit found (ifx present)
+
+======================================================================
+  STEP 2 - Virtual Environment
+======================================================================
+  [OK]  Virtual environment shakermaker_venv already exists - will use it
+        Path: C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 3 - Python Dependencies Checklist
+======================================================================
+  [OK]  numpy 1.26.4 already installed
+  [OK]  setuptools 65.5.0 already installed
+  [OK]  wheel 0.46.3 already installed
+  [OK]  h5py 3.16.0 already installed
+  [OK]  mpi4py 4.1.1 already installed
+  [OK]  matplotlib 3.10.8 already installed
+  [OK]  scipy 1.15.3 already installed
+  [--]  pandas not found - will install
+
+======================================================================
+  STEP 4 - Installation Summary
+======================================================================
+
+  System components to install:
+    (none)
+
+  Python packages to install/update:
+    - pandas
+
+  Virtual environment : shakermaker_venv
+  Location            : C:\Users\ppala\shakermaker_venv
+
+
+======================================================================
+  STEP 5 - Installing System Components
+======================================================================
+
+======================================================================
+  STEP 6 - Upgrading pip
+======================================================================
+
+  [OK]  pip upgraded: pip 26.0.1 from C:\Users\ppala\shakermaker_venv\lib\site-packages\pip (python 3.10)
+
+======================================================================
+  STEP 7 - Installing Python Dependencies
+======================================================================
+  Installing pandas ...
+
+  [OK]  pandas installed
+
+======================================================================
+  STEP 8 - Fix Python Base sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base
+  [OK]  sitecustomize.py written to Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+
+======================================================================
+  STEP 9 - Final Verification
+======================================================================
+  [OK]  Virtual env Python: Python 3.10.9
+  [OK]  numpy 1.26.4
+  [OK]  setuptools 65.5.0
+  [OK]  wheel 0.46.3
+  [OK]  h5py 3.16.0
+  [OK]  mpi4py 4.1.1
+  [OK]  matplotlib 3.10.8
+  [OK]  scipy 1.15.3
+  [OK]  pandas 2.3.3
+
+======================================================================
+  Setup complete!
+  Venv : shakermaker_venv  at  C:\Users\ppala\shakermaker_venv
+  Log  : C:\Users\ppala\shakermaker_setup.log
+  Next : Run Step 2 - Junction Setup
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314215748
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215801
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\02_shakermaker_junction.ps1
+Process ID: 163760
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Check Existing Junction
+======================================================================
+  [OK]  Junction already exists at C:\shakermaker_compiler\ShakerMaker
+        Currently pointing to: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+Confirm
+The item at C:\shakermaker_compiler\ShakerMaker has children and the Recurse parameter was not specified. If you continue, all children will be removed with the item. Are you sure you want to continue?
+&Yes  Yes to &All  &No  No to A&ll  &Suspend
+Y
+        Existing junction removed
+
+======================================================================
+  STEP 2 - ShakerMaker Source Location
+======================================================================
+
+  Source path found in shakermaker.cfg:
+  C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+  [OK]  Source path validated: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 3 - Create Junction
+======================================================================
+  [OK]  Directory already exists: C:\shakermaker_compiler
+  [OK]  Junction created successfully
+          C:\shakermaker_compiler\ShakerMaker
+          => C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 4 - Update Config File
+======================================================================
+  [OK]  SHAKERMAKER_SOURCE saved to shakermaker.cfg
+
+======================================================================
+  STEP 5 - Verify Junction
+======================================================================
+  [OK]  Junction verified as reparse point
+  [OK]  setup.py reachable at C:\shakermaker_compiler\ShakerMaker\setup.py : True
+
+======================================================================
+  Junction setup complete!
+  Junction : C:\shakermaker_compiler\ShakerMaker
+  Source   : C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+  Log      : C:\Users\ppala\shakermaker_junction.log
+  Next     : Run Step 3 - Build and Compile
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314215803
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314215804
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 166328
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [OK]  Virtual environment found: C:\Users\ppala\shakermaker_venv
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+======================================================================
+  STEP 2 - Create ifort.bat Wrapper
+======================================================================
+  [OK]  ifort.bat wrapper already exists
+
+======================================================================
+  STEP 3 - Run Build via CMD
+======================================================================
+
+  The build requires a CMD environment with VS and Intel compilers.
+  Launching build subprocess now...
+
+  [OK]  Build completed successfully
+
+======================================================================
+  STEP 4 - Create sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base
+  [OK]  sitecustomize.py created in venv: C:\Users\ppala\shakermaker_venv\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py created in Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py contents verified
+
+======================================================================
+  STEP 4b - Add Intel paths to system PATH permanently
+======================================================================
+  [OK]  Already in system PATH: C:\Program Files (x86)\Intel\oneAPI\compiler\latest\bin
+  [OK]  Already in system PATH: C:\Program Files (x86)\Intel\oneAPI\mpi\latest\bin
+  [!!]  Failed to update system PATH - try running as Administrator: Exception calling "SetEnvironmentVariable" with "3" argument(s): "Requested registry access is not allowed."
+
+======================================================================
+  STEP 5 - Smoke Test
+======================================================================
+  Testing core import inside initialized CMD...
+  [OK]  core import OK
+
+======================================================================
+  Build complete!
+  Venv    : C:\Users\ppala\shakermaker_venv
+  Build   : C:\shakermaker_compiler\ShakerMaker
+  Log     : C:\Users\ppala\shakermaker_build.log
+
+  To activate your environment:
+  C:\Users\ppala\shakermaker_venv\Scripts\Activate.ps1
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314215816
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314220237
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 13976
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 0 - Clean stale sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  Clean sitecustomize.py written to Python base
+
+======================================================================
+  STEP 1 - System Checklist
+======================================================================
+  [OK]  Git found: git version 2.53.0.windows.2
+  [OK]  Python 3.10 found: Python 3.10.11
+  [OK]  Visual Studio 2022 Community found
+  [OK]  Intel oneAPI Base Toolkit found (MKL present)
+  [OK]  Intel oneAPI HPC Toolkit found (ifx present)
+
+======================================================================
+  STEP 2 - Virtual Environment
+======================================================================
+  [--]  Virtual environment shakermaker_venv not found - will create it
+        Path: C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 3 - Python Dependencies Checklist
+======================================================================
+        Virtual environment not yet created - all deps will be installed after
+
+======================================================================
+  STEP 4 - Installation Summary
+======================================================================
+
+  System components to install:
+    - VirtualEnv
+
+  Python packages to install/update:
+    - numpy==1.26.4
+    - setuptools
+    - wheel
+    - h5py
+    - mpi4py
+    - matplotlib
+    - scipy
+    - pandas
+
+  Virtual environment : shakermaker_venv
+  Location            : C:\Users\ppala\shakermaker_venv
+
+
+======================================================================
+  STEP 5 - Installing System Components
+======================================================================
+  Creating virtual environment shakermaker_venv ...
+
+  [OK]  Virtual environment created at C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 6 - Upgrading pip
+======================================================================
+
+  [OK]  pip upgraded: pip 26.0.1 from C:\Users\ppala\shakermaker_venv\lib\site-packages\pip (python 3.10)
+
+======================================================================
+  STEP 7 - Installing Python Dependencies
+======================================================================
+  Installing numpy==1.26.4 ...
+
+  [OK]  numpy==1.26.4 installed
+  Installing setuptools ...
+
+  [OK]  setuptools installed
+  Installing wheel ...
+
+  [OK]  wheel installed
+  Installing h5py ...
+
+  [OK]  h5py installed
+  Installing mpi4py ...
+
+  [OK]  mpi4py installed
+  Installing matplotlib ...
+
+  [OK]  matplotlib installed
+  Installing scipy ...
+
+  [OK]  scipy installed
+  Installing pandas ...
+
+  [OK]  pandas installed
+
+======================================================================
+  STEP 8 - Fix Python Base sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base
+  [OK]  sitecustomize.py written to Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+
+======================================================================
+  STEP 9 - Final Verification
+======================================================================
+  [OK]  Virtual env Python: Python 3.10.11
+  [OK]  numpy 1.26.4
+  [OK]  setuptools 65.5.0
+  [OK]  wheel 0.46.3
+  [OK]  h5py 3.16.0
+  [OK]  mpi4py 4.1.1
+  [OK]  matplotlib 3.10.8
+  [OK]  scipy 1.15.3
+  [OK]  pandas 2.3.3
+
+======================================================================
+  Setup complete!
+  Venv : shakermaker_venv  at  C:\Users\ppala\shakermaker_venv
+  Log  : C:\Users\ppala\shakermaker_setup.log
+  Next : Run Step 2 - Junction Setup
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314220356
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314220356
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\02_shakermaker_junction.ps1
+Process ID: 11476
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Check Existing Junction
+======================================================================
+  [OK]  Junction already exists at C:\shakermaker_compiler\ShakerMaker
+        Currently pointing to: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+Confirm
+The item at C:\shakermaker_compiler\ShakerMaker has children and the Recurse parameter was not specified. If you continue, all children will be removed with the item. Are you sure you want to continue?
+&Yes  Yes to &All  &No  No to A&ll  &Suspend
+Y
+        Existing junction removed
+
+======================================================================
+  STEP 2 - ShakerMaker Source Location
+======================================================================
+
+  Source path found in shakermaker.cfg:
+  C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+  [OK]  Source path validated: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 3 - Create Junction
+======================================================================
+  [OK]  Directory already exists: C:\shakermaker_compiler
+  [OK]  Junction created successfully
+          C:\shakermaker_compiler\ShakerMaker
+          => C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 4 - Update Config File
+======================================================================
+  [OK]  SHAKERMAKER_SOURCE saved to shakermaker.cfg
+
+======================================================================
+  STEP 5 - Verify Junction
+======================================================================
+  [OK]  Junction verified as reparse point
+  [OK]  setup.py reachable at C:\shakermaker_compiler\ShakerMaker\setup.py : True
+
+======================================================================
+  Junction setup complete!
+  Junction : C:\shakermaker_compiler\ShakerMaker
+  Source   : C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+  Log      : C:\Users\ppala\shakermaker_junction.log
+  Next     : Run Step 3 - Build and Compile
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314220444
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314220445
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 16388
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [OK]  Virtual environment found: C:\Users\ppala\shakermaker_venv
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+======================================================================
+  STEP 2 - Create ifort.bat Wrapper
+======================================================================
+  [OK]  ifort.bat wrapper already exists
+
+======================================================================
+  STEP 3 - Run Build via CMD
+======================================================================
+
+  The build requires a CMD environment with VS and Intel compilers.
+  Launching build subprocess now...
+
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> $global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20260314220503
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314220511
+Username: MARTHA\ppala
+RunAs User: MARTHA\ppala
+Configuration Name: 
+Machine: MARTHA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 10900
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [OK]  Virtual environment found: C:\Users\ppala\shakermaker_venv
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+======================================================================
+  STEP 2 - Create ifort.bat Wrapper
+======================================================================
+  [OK]  ifort.bat wrapper already exists
+
+======================================================================
+  STEP 3 - Run Build via CMD
+======================================================================
+
+  The build requires a CMD environment with VS and Intel compilers.
+  Launching build subprocess now...
+
+  [OK]  Build completed successfully
+
+======================================================================
+  STEP 4 - Create sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base
+  [OK]  sitecustomize.py created in venv: C:\Users\ppala\shakermaker_venv\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py created in Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py contents verified
+
+======================================================================
+  STEP 4b - Add Intel paths to system PATH permanently
+======================================================================
+  [OK]  Already in system PATH: C:\Program Files (x86)\Intel\oneAPI\compiler\latest\bin
+  [OK]  Already in system PATH: C:\Program Files (x86)\Intel\oneAPI\mpi\latest\bin
+  [OK]  System PATH updated - Intel MPI and DLLs now available permanently
+
+======================================================================
+  STEP 5 - Smoke Test
+======================================================================
+  Testing core import inside initialized CMD...
+  [OK]  core import OK
+
+======================================================================
+  Build complete!
+  Venv    : C:\Users\ppala\shakermaker_venv
+  Build   : C:\shakermaker_compiler\ShakerMaker
+  Log     : C:\Users\ppala\shakermaker_build.log
+
+  To activate your environment:
+  C:\Users\ppala\shakermaker_venv\Scripts\Activate.ps1
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314220536
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314232656
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 173920
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 0 - Clean stale sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  Clean sitecustomize.py written to Python base
+        Removed stale sitecustomize.py from venv
+
+======================================================================
+  STEP 1 - System Checklist
+======================================================================
+  [OK]  Git found: git version 2.53.0.windows.2
+  [OK]  Python 3.10 found: Python 3.10.9
+  [OK]  Visual Studio 2022 Community found
+  [OK]  Intel oneAPI Base Toolkit found (MKL present)
+  [OK]  Intel oneAPI HPC Toolkit found (ifx present)
+
+======================================================================
+  STEP 2 - Virtual Environment
+======================================================================
+  [OK]  Virtual environment shakermaker_venv already exists - will use it
+        Path: C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 3 - Python Dependencies Checklist
+======================================================================
+  [OK]  numpy 1.26.4 already installed
+  [OK]  setuptools 65.5.0 already installed
+  [OK]  wheel 0.46.3 already installed
+  [OK]  h5py 3.16.0 already installed
+  [OK]  mpi4py 4.1.1 already installed
+  [OK]  matplotlib 3.10.8 already installed
+  [OK]  scipy 1.15.3 already installed
+  [OK]  pandas 2.3.3 already installed
+
+======================================================================
+  STEP 4 - Installation Summary
+======================================================================
+
+  Everything is already installed. Nothing to do!
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314232742
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314232742
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\02_shakermaker_junction.ps1
+Process ID: 175748
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Check Existing Junction
+======================================================================
+  [OK]  Junction already exists at C:\shakermaker_compiler\ShakerMaker
+        Currently pointing to: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+Confirm
+The item at C:\shakermaker_compiler\ShakerMaker has children and the Recurse parameter was not specified. If you continue, all children will be removed with the item. Are you sure you want to continue?
+&Yes  Yes to &All  &No  No to A&ll  &Suspend
+Y
+        Existing junction removed
+
+======================================================================
+  STEP 2 - ShakerMaker Source Location
+======================================================================
+
+  Source path found in shakermaker.cfg:
+  C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+  [OK]  Source path validated: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 3 - Create Junction
+======================================================================
+  [OK]  Directory already exists: C:\shakermaker_compiler
+  [OK]  Junction created successfully
+          C:\shakermaker_compiler\ShakerMaker
+          => C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 4 - Update Config File
+======================================================================
+  [OK]  SHAKERMAKER_SOURCE saved to shakermaker.cfg
+
+======================================================================
+  STEP 5 - Verify Junction
+======================================================================
+  [OK]  Junction verified as reparse point
+  [OK]  setup.py reachable at C:\shakermaker_compiler\ShakerMaker\setup.py : True
+
+======================================================================
+  Junction setup complete!
+  Junction : C:\shakermaker_compiler\ShakerMaker
+  Source   : C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+  Log      : C:\Users\ppala\shakermaker_junction.log
+  Next     : Run Step 3 - Build and Compile
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314232750
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314232755
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 6168
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [OK]  Virtual environment found: C:\Users\ppala\shakermaker_venv
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+======================================================================
+  STEP 2 - Create ifort.bat Wrapper
+======================================================================
+  [OK]  ifort.bat wrapper already exists
+
+======================================================================
+  STEP 3 - Run Build via CMD
+======================================================================
+
+  The build requires a CMD environment with VS and Intel compilers.
+  Launching build subprocess now...
+
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> $global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20260314232814
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314232820
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\01_shakermaker_setup.ps1
+Process ID: 129404
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 0 - Clean stale sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  Clean sitecustomize.py written to Python base
+
+======================================================================
+  STEP 1 - System Checklist
+======================================================================
+  [OK]  Git found: git version 2.53.0.windows.2
+  [OK]  Python 3.10 found: Python 3.10.9
+  [OK]  Visual Studio 2022 Community found
+  [OK]  Intel oneAPI Base Toolkit found (MKL present)
+  [OK]  Intel oneAPI HPC Toolkit found (ifx present)
+
+======================================================================
+  STEP 2 - Virtual Environment
+======================================================================
+  [OK]  Virtual environment shakermaker_venv already exists - will use it
+        Path: C:\Users\ppala\shakermaker_venv
+
+======================================================================
+  STEP 3 - Python Dependencies Checklist
+======================================================================
+  [OK]  numpy 1.26.4 already installed
+  [OK]  setuptools 65.5.0 already installed
+  [OK]  wheel 0.46.3 already installed
+  [OK]  h5py 3.16.0 already installed
+  [OK]  mpi4py 4.1.1 already installed
+  [OK]  matplotlib 3.10.8 already installed
+  [OK]  scipy 1.15.3 already installed
+  [OK]  pandas 2.3.3 already installed
+
+======================================================================
+  STEP 4 - Installation Summary
+======================================================================
+
+  Everything is already installed. Nothing to do!
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314232822
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314232822
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\02_shakermaker_junction.ps1
+Process ID: 168636
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Check Existing Junction
+======================================================================
+  [OK]  Junction already exists at C:\shakermaker_compiler\ShakerMaker
+        Currently pointing to: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+Confirm
+The item at C:\shakermaker_compiler\ShakerMaker has children and the Recurse parameter was not specified. If you continue, all children will be removed with the item. Are you sure you want to continue?
+&Yes  Yes to &All  &No  No to A&ll  &Suspend
+Y
+        Existing junction removed
+
+======================================================================
+  STEP 2 - ShakerMaker Source Location
+======================================================================
+
+  Source path found in shakermaker.cfg:
+  C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+  [OK]  Source path validated: C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 3 - Create Junction
+======================================================================
+  [OK]  Directory already exists: C:\shakermaker_compiler
+  [OK]  Junction created successfully
+          C:\shakermaker_compiler\ShakerMaker
+          => C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+
+======================================================================
+  STEP 4 - Update Config File
+======================================================================
+  [OK]  SHAKERMAKER_SOURCE saved to shakermaker.cfg
+
+======================================================================
+  STEP 5 - Verify Junction
+======================================================================
+  [OK]  Junction verified as reparse point
+  [OK]  setup.py reachable at C:\shakermaker_compiler\ShakerMaker\setup.py : True
+
+======================================================================
+  Junction setup complete!
+  Junction : C:\shakermaker_compiler\ShakerMaker
+  Source   : C:\Dropbox\01. Brain\11. GitHub\ShakerMaker
+  Log      : C:\Users\ppala\shakermaker_junction.log
+  Next     : Run Step 3 - Build and Compile
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314232823
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260314232824
+Username: LUISA\ppala
+RunAs User: LUISA\ppala
+Configuration Name: 
+Machine: LUISA (Microsoft Windows NT 10.0.26200.0)
+Host Application: PowerShell -ExecutionPolicy Bypass -File C:\Dropbox\01. Brain\11. GitHub\ShakerMaker\shakermaker_windows_compilation_files\SCRIPTS\03_shakermaker_build.ps1
+Process ID: 170452
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  STEP 1 - Pre-Build Checks
+======================================================================
+  [OK]  Junction found: C:\shakermaker_compiler\ShakerMaker
+  [OK]  Virtual environment found: C:\Users\ppala\shakermaker_venv
+  [OK]  Visual Studio 2022 found
+  [OK]  Intel ifx found
+
+======================================================================
+  STEP 2 - Create ifort.bat Wrapper
+======================================================================
+  [OK]  ifort.bat wrapper already exists
+
+======================================================================
+  STEP 3 - Run Build via CMD
+======================================================================
+
+  The build requires a CMD environment with VS and Intel compilers.
+  Launching build subprocess now...
+
+  [OK]  Build completed successfully
+
+======================================================================
+  STEP 4 - Create sitecustomize.py
+======================================================================
+        Removed stale sitecustomize.py from Python base
+  [OK]  sitecustomize.py created in venv: C:\Users\ppala\shakermaker_venv\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py created in Python base: C:\Users\ppala\AppData\Local\Programs\Python\Python310\Lib\site-packages\sitecustomize.py
+  [OK]  sitecustomize.py contents verified
+
+======================================================================
+  STEP 4b - Add Intel paths to system PATH permanently
+======================================================================
+  [OK]  Already in system PATH: C:\Program Files (x86)\Intel\oneAPI\compiler\latest\bin
+  [OK]  Already in system PATH: C:\Program Files (x86)\Intel\oneAPI\mpi\latest\bin
+  [!!]  Failed to update system PATH - try running as Administrator: Exception calling "SetEnvironmentVariable" with "3" argument(s): "Requested registry access is not allowed."
+
+======================================================================
+  STEP 5 - Smoke Test
+======================================================================
+  Testing core import inside initialized CMD...
+  [OK]  core import OK
+
+======================================================================
+  Build complete!
+  Venv    : C:\Users\ppala\shakermaker_venv
+  Build   : C:\shakermaker_compiler\ShakerMaker
+  Log     : C:\Users\ppala\shakermaker_build.log
+
+  To activate your environment:
+  C:\Users\ppala\shakermaker_venv\Scripts\Activate.ps1
+======================================================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20260314232838
+**********************
